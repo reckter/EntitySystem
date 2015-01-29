@@ -1,5 +1,6 @@
 package me.reckter.entity.events;
 
+
 import me.reckter.entity.entities.Entity;
 
 import java.util.List;
@@ -11,7 +12,7 @@ abstract public class AllEntityEvent extends Event{
 
     List<Entity> entities;
 
-    public AllEntityEvent() {
-        super(null, null);
+    public AllEntityEvent(List<Entity> entities) {
+        this.entities = entities;
     }
 }

@@ -1,10 +1,11 @@
 package me.reckter.entity.matcher;
 
+
 import me.reckter.entity.component.Component;
 import me.reckter.entity.entities.Entity;
-import me.reckter.entity.logic.Entities;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -35,7 +36,7 @@ public class Matcher {
     @SuppressWarnings("SuspiciousMethodCalls")
     public boolean matches(Entity entity) {
 
-        List<Component> components = entity.getComponents();
+        Collection<Class<? extends Component>> components = entity.getComponentsClass();
         if(!components.containsAll(requierements)) {
             return false;
         }

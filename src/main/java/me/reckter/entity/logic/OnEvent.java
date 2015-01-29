@@ -1,5 +1,6 @@
 package me.reckter.entity.logic;
 
+
 import me.reckter.entity.events.Event;
 
 import java.lang.annotation.ElementType;
@@ -12,7 +13,6 @@ import java.lang.annotation.Target;
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
-public @interface On {
-    public Class<? extends Event> value();
-    public int priority() default 0;
+public @interface OnEvent {
+    public int value() default 0;
 }
